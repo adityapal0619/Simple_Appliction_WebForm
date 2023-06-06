@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dash.master.cs" Inherits="Simple_Appliction.Dash" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body{
+            background-color:chartreuse;
+        }
+        #xyz{
+            background-color:aqua;
+            color:gold;
+            text-align=center;
+        }
+        .sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+        .auto-style1 {
+            margin-left: 498px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+           
+                 <h1 id="xyz">Welcome to DaskBord</h1>
+   <div class="sidebar">
+  <a class="active" href="Name">Name</a>
+  <a href="Company.aspx">Company</a>
+  <a href="Country.aspx">Country
+  </a>
+  <a href="State.aspx">State</a>
+ <a href="City.aspx">City</a>
+</div>
+           <div>
+            <asp:Button ID="List" runat="server" Text="List" Width="104px" CssClass="auto-style1" OnClick="List_Click" />
+            <asp:Button ID="Register" runat="server" Text="Register" Width="87px" OnClick="Register_Click" />
+        </div>
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
